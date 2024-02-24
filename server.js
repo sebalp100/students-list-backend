@@ -4,6 +4,8 @@ const dotenv = require("dotenv").config();
 const studentRoutes = require("./src/student/routes")
 const port = process.env.PORT || 5000;
 
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send("Hello world");
 })
